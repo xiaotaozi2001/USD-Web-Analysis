@@ -1,0 +1,107 @@
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 248, 250, 252;
+}
+
+body {
+  color: #333;
+  background: white;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.dropzone {
+  border: 2px dashed rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+}
+
+.dropzone:hover, .dropzone.active {
+  border-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.file-info {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.reference-item {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.reference-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+  transform: translateX(4px);
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #60A5FA;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.error-message {
+  background: rgba(239, 68, 68, 0.1);
+  border-left: 4px solid #EF4444;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  color: #FCA5A5;
+}
+
+.loading-spinner {
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top: 3px solid #60A5FA;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-start-rgb: 26, 32, 44;
+    --background-end-rgb: 31, 41, 55;
+  }
+}
